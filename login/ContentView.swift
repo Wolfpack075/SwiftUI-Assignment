@@ -2,23 +2,34 @@
 //  ContentView.swift
 //  login
 //
-//  Created by Shoumik Barman Polok on 10/10/23.
+//  Created by Kazi Fahim Tahmid on 10/10/23.
 //
 
 import SwiftUI
 
 struct ContentView: View {
+   
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        WelcomeScreenView()
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+
+struct PrimaryButton: View {
+    var title: String
+    var body: some View {
+        Text(title)
+            .font(.title3)
+            .fontWeight(.bold)
+            .foregroundColor(.white)
+            .frame(maxWidth: .infinity)
+            .padding()
+            .background(Color("PrimaryColor"))
+            .cornerRadius(50)
+    }
 }
